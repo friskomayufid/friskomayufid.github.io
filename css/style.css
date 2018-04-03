@@ -1,0 +1,513 @@
+/* CSS CLEARFIX */
+
+.navbar:before,
+.navbar:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.navbar:after {
+    clear: both;
+}
+
+.navbar {
+    *zoom: 1;
+}
+
+
+/* END */
+
+
+/* BODY CSS */
+
+body {
+    background-color: #150332;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #240752;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar h1 {
+    color: #fff;
+    padding: 20px 0;
+    float: left;
+    font-size: 25px;
+}
+
+.navbar span {
+    color: #c471fd;
+}
+
+.navbar ul {
+    padding: 25px 0;
+    float: right;
+}
+
+.navbar li {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #3e187a;
+}
+
+.navbar .nav-active {
+    color: #3e187a;
+}
+
+
+/* Header */
+
+.header {
+    background-color: #3e187a;
+    min-height: 700px;
+    color: #fff;
+}
+
+.left-header {
+    width: 30%;
+    float: left;
+}
+
+.img-frisko {
+    padding-top: 200px;
+}
+
+.right-header {
+    width: 70%;
+    float: right;
+}
+
+.bungkus {
+    padding-left: 40px;
+}
+
+.right-header h2 {
+    padding-top: 220px;
+    font-size: 40px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.right-header h2 span {
+    color: #c471fd;
+}
+
+.right-header h1 {
+    padding-top: 10px;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.right-header h3 {
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.right-header h3 span {
+    color: #c471fd;
+}
+
+.right-header ul li:hover {
+    opacity: 0.8;
+}
+
+.right-header li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+
+/* About */
+
+.about {
+    min-height: 300px;
+    background-color: #fff;
+}
+
+.about h1 {
+    color: #150332;
+    padding-top: 25px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.about hr {
+    width: 20%;
+    size: 5px;
+    color: #c471fd;
+    text-align: center;
+}
+
+.about p {
+    padding-top: 20px;
+    color: #4c435e;
+    font-size: 20px;
+    text-align: center;
+}
+
+.about .yoroshiku {
+    padding-top: 30px;
+    font-size: 40px;
+}
+
+
+/* Awal Skills */
+
+.skills {
+    min-height: 600px;
+    background-color: #fff;
+}
+
+.skills h1 {
+    color: #150332;
+    padding-top: 25px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.skills hr {
+    width: 20%;
+    size: 5px;
+    color: #c471fd;
+    text-align: center;
+}
+
+
+/* Left Skills */
+
+.left-skills {
+    width: 30%;
+    float: left;
+}
+
+.skills img {
+    padding-top: 100px;
+}
+
+
+/* Right Skills */
+
+.right-skills {
+    width: 70%;
+    float: right;
+}
+
+.sbar-container {
+    padding-top: 70px;
+    padding-left: 130px;
+}
+
+
+/* Skills bar effects */
+
+.skillbar {
+    position: relative;
+    display: inline-block;
+    margin: 15px 0;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    background: #6adcfa;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.skillbar-bar {
+    height: 35px;
+    width: 0px;
+    background: #6adcfa;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Style Portfolio */
+
+.portfolio {
+    background-color: #3e187a;
+    min-height: 680px;
+}
+
+.portfolio h1 {
+    color: #fff;
+    padding-top: 25px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.portfolio hr {
+    width: 20%;
+    size: 5px;
+    color: #c471fd;
+    text-align: center;
+}
+
+
+/* Style Filter Portfolio */
+
+.portfolio .filter-box {
+    text-align: center;
+}
+
+.portfolio ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /* For IE, the outcast */
+    zoom: 1;
+    *display: inline;
+}
+
+.portfolio li {
+    float: left;
+    padding: 2px 5px;
+    border: 1px solid black;
+}
+
+.portfolio ul li {
+    float: left;
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-right: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.portfolio ul li:hover {
+    background-color: #fff;
+    color: #240752;
+}
+
+.portfolio .active {
+    color: #240752;
+    background-color: #fff;
+}
+
+.box-port .content {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    ms-transform: translate(-50%, -200%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.box a {
+    text-decoration: none;
+}
+
+.content span {
+    font-size: 18px;
+    display: block;
+}
+
+.box-port .box {
+    float: left;
+    padding: 15px;
+}
+
+.box img {
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.box:hover img {
+    opacity: 0;
+}
+
+.box:hover .content {
+    opacity: 1;
+}
+
+.box-port .bg-img {
+    background-color: #150332;
+}
+
+
+/* Style Footer */
+
+.footer {
+    position: relative;
+    top: -10px;
+    width: 100%;
+    height: 80px;
+    background-color: #150332;
+}
+
+.footer .arigatou {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.footer p {
+    padding-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Media Query */
+
+@media only screen and (max-width:600px) {
+    /* Navbar & Header */
+    .navbar ul {
+        visibility: hidden;
+        display: none;
+    }
+    .header {
+        min-height: 700px;
+    }
+    .left-header {
+        width: 100%;
+    }
+    .img-frisko {
+        padding-top: 100px;
+    }
+    .right-header {
+        width: 100%;
+    }
+    .bungkus {
+        padding-left: 0;
+    }
+    .right-header h2 {
+        padding-top: 0;
+    }
+    /* Skills */
+    .skills {
+        min-height: 800px;
+        background-color: #fff;
+    }
+    .left-skills {
+        width: 100%;
+        text-align: center;
+    }
+    .skills img {
+        padding-top: 50px;
+        width: 70%;
+    }
+    .right-skills {
+        width: 100%;
+    }
+    .sbar-container {
+        padding: 20px 0;
+    }
+    /* Portfolio */
+    .box-port .box {
+        float: left;
+        padding: 20px;
+        padding-bottom: 5px;
+    }
+    /* Footer */
+    .footer {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .navbar ul {
+        visibility: hidden;
+        display: none;
+    }
+    .header {
+        min-height: 700px;
+    }
+    .left-header {
+        width: 100%;
+    }
+    .img-frisko {
+        padding-top: 100px;
+    }
+    .right-header {
+        width: 100%;
+    }
+    .bungkus {
+        padding-left: 0;
+    }
+    .right-header h2 {
+        padding-top: 30px;
+    }
+    /* Skills */
+    .skills {
+        min-height: 1000px;
+        background-color: #fff;
+    }
+    .left-skills {
+        width: 100%;
+        text-align: center;
+    }
+    .skills img {
+        padding-top: 50px;
+        width: 70%;
+    }
+    .right-skills {
+        width: 100%;
+    }
+    .sbar-container {
+        padding: 20px 0;
+    }
+    /* Portfolio */
+    .box-port .box {
+        float: left;
+        padding: 20px;
+        padding-bottom: 5px;
+    }
+    /* Footer */
+    .footer {
+        top: 0;
+    }
+}
