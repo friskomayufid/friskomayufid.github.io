@@ -1,72 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
+import '../styles/app.css'
+import Link from 'gatsby-link'
+import profile from '../../content/assets/frisko.jpg'
+import bg from '../../content/assets/background.png'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    const { children } = this.props
+    
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          {/* © {new Date().getFullYear()}, Built with */}
-          {/* {` `} */}
-          {/* <a href="https://www.gatsbyjs.org">love &Gatsby</a> */}
-        </footer>
+      <div>
+        <div className="container">
+          <img className="background" alt="background" src={bg}></img> 
+          <div className="section-wrap">
+            <div className="section-left">
+              <div className="title">
+                <img class="profile" alt="frisko" src={profile}></img> 
+                <p>Hi, my name is</p>
+                <h1>Frisko Mayufid</h1>
+                <p>I am a Front End Developer & Blogger</p>
+              </div>
+            </div>
+            <div className="section-right">
+              <div className="navbar">
+                <Link className="navlink" to="/">About Me</Link>
+                <Link className="navlink" to="/">Resume</Link>
+                <Link className="navlink" to="/blog">Blog</Link>
+              </div>
+              <main>{children}</main>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

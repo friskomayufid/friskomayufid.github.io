@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 
-import Bio from "../components/bio"
 import SEO from "../components/seo"
+import Layout from '../components/layout'
 
 export default class blog extends Component {
   render() {
     const { data } = this.props
     const posts = data.allMarkdownRemark.edges
+    const siteTitle = data.site.siteMetadata.title
 
     return (
-      <div>
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Blog"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`, `frisko`]}
         />
-        <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -39,7 +39,7 @@ export default class blog extends Component {
             </div>
           )
         })}
-      </div>
+      </Layout>
     )
   }
 }
