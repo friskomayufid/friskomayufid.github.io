@@ -1,12 +1,19 @@
 ---
-title: "About me"
+title: "Tentang Saya"
 template: "page"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+Halo perkenalkan,
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+Saya <b>Frisko Mayufid,</b> Mahasiswa Teknik Informatika di Univ. Mercubuana & Seorang Front End Developer. Saya menulis tentang web development, programming dan hal random.
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+Saya menyukai teknologi khususnya pada web dan mobile development, dan terkadang juga membuat game. Beberapa eksperimen ada yang sukses dan kebanyakan gagal.
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+Berikut ini beberapa list project yg sudah dikerjakan :
+
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.pocistudio.kuismuslimin">Kuis Muslimin</a>. Game edukasi berbasis android yang dibuat menggunakan Unity3D yang ditujukan untuk anak anak terutama usia dini. (</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.Pokorostudio.wedus">Escape From Sea Monster</a>. Game endless runner (Android), yang dimainkan dengan cara mengontrol kapal selam agar tidak menabrak rintangan di depan dan kabur dari monster laut .</li>
+</ul>
+
+Jika ingin menghubungi, silahkan kontak Saya di email <a href="mailto:friskomayufid@gmail.com" target="_blank" rel="noopener noreferrer">friskomayufid@gmail.com</a>
