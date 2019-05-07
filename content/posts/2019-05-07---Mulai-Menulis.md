@@ -33,4 +33,6 @@ kemudian barangkali ada yang penasaran dengan apa blog ini dibuat, Saya mengguna
 Gatsby.Js (React) dalam pembuatannya.
 
 Mungkin cukup segitu aja, semoga dari tulisan pertama ini dapat tercipta tulisan tulisan
-lainnya yang bermanfaat. Ganbatte!
+lainnya yang bermanfaat. 
+
+Ganbatte!
