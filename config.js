@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://frisko.space',
   title: 'Frisko Mayufid',
   subtitle: 'Mahasiswa Teknik Informatika di Univ. Mercubuana & Seorang Front End Developer. Saya menulis tentang web development, programming dan hal random.',
   copyright: '© All rights reserved.',
