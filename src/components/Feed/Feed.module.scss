@@ -4,7 +4,17 @@
 .feed {
   &__item {
     @include margin-bottom(1.25);
-
+    border-bottom: 1px dotted #303030;
+    padding: 10px 15px;
+    border: 1px solid #c8e1ff;
+    border-radius: 10px;
+    &:hover,
+    &:focus {
+      opacity: .8;
+      color: $color-primary;
+      cursor: pointer;
+      background: #c8e1ff;
+    }
     &:last-child {
       @include margin-bottom(.5);
     }
@@ -66,13 +76,18 @@
 
     &-readmore {
       font-weight: 700;
+      border-radius: 1.25rem;
+      background-color: #c8e1ff;
+      padding: .625rem 2.5rem;
+      font-weight: 700;
       font-size: $typographic-base-font-size;
       color: $color-primary;
 
       &:hover,
       &:focus {
+        opacity: .8;
         color: $color-primary;
-        border-bottom: 1px solid $color-primary;
+        box-shadow: 0 0 15px 0 rgba(32,32,32,.08);
       }
 
     }

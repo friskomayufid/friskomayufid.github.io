@@ -24,7 +24,7 @@ module.exports = {
     bio: 'Mahasiswa Teknik Informatika di Univ. Mercubuana & Seorang Front End Developer. Saya menulis tentang web development, programming dan hal random.',
     contacts: {
       email: 'friskomayufid@gmail.com',
-      twitter: '#',
+      twitter: 'friskospace',
       github: 'friskomayufid',
     }
   }

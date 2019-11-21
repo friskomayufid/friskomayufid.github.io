@@ -12,7 +12,6 @@ Saya menyukai teknologi khususnya pada web dan mobile development, dan terkadang
 Berikut ini beberapa list project yg sudah dikerjakan :
 
 <ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.pocistudio.kuismuslimin">Kuis Muslimin</a>. Game edukasi berbasis android yang dibuat menggunakan Unity3D yang ditujukan untuk anak anak terutama usia dini. (</li>
 <li><a href="https://play.google.com/store/apps/details?id=com.Pokorostudio.wedus">Escape From Sea Monster</a>. Game endless runner (Android), yang dimainkan dengan cara mengontrol kapal selam agar tidak menabrak rintangan di depan dan kabur dari monster laut .</li>
 </ul>
 
