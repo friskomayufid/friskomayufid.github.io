@@ -13,6 +13,7 @@ Berikut ini beberapa list project yg sudah dikerjakan :
 
 <ul>
 <li><a href="https://play.google.com/store/apps/details?id=com.Pokorostudio.wedus">Escape From Sea Monster</a>. Game endless runner (Android), yang dimainkan dengan cara mengontrol kapal selam agar tidak menabrak rintangan di depan dan kabur dari monster laut .</li>
+<li><a href="https://kodingnesia.com/">Kodingnesia</a>. Tempat belajar pemrograman & linux berbahasa Indonesia. Kodingnesia menyediakan konten berkualitas dan mudah dipahami oleh pemula yang ingin belajar.</li>
 </ul>
 
 Jika ingin menghubungi, silahkan kontak Saya di email <a href="mailto:friskomayufid@gmail.com" target="_blank" rel="noopener noreferrer">friskomayufid@gmail.com</a>
