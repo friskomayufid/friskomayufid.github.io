@@ -1,11 +1,11 @@
-import React from "react"
-import "./layout.css"
+import React from 'react'
+import './layout.css'
 
 type layoutProps = {
   children: any
 }
 
-function Layout({ children } : layoutProps) {
+function Layout({ children }: layoutProps) {
   return (
     <>
       <main>{children}</main>
