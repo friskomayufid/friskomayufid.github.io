@@ -31,8 +31,13 @@ export const Hero = () => {
 }
 
 const Container = styled.div`
-  margin: auto 20px;
-  margin-top: 20px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: -4vw;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 const Subtitle = styled.h2`
   font-style: normal;
@@ -55,7 +60,7 @@ const Description = styled.p`
   font-weight: 300;
   font-size: 18px;
   line-height: 127.34%;
-  text-align: justify;
+  text-align: center;
   letter-spacing: 0.095em;
   margin-top: 15px;
 `
