@@ -1,16 +1,16 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
 export const Hero = () => {
   return (
     <Container>
-      <Subtitle>Hi Salam Kenal! Nama saya</Subtitle>
+      <Subtitle>Hello world! I am,</Subtitle>
       <Title>Frisko Mayufid</Title>
       <Description>
-        Seorang Front End Developer dari Indonesia. Hobi main game online dan
-        ngoding (pastinya). Kadang sharing pengetahuan dan hal yang lagi
-        dipelajari disini.
+        Programmer and Gamers.
+        Love working in UI/UX Design & Front-End Development, experienced in
+        creating a responsive website and make the website or apps look attractive. 
       </Description>
       <WrapperImage>
         <Link to="https://www.linkedin.com/in/friskomayufid/">
