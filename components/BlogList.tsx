@@ -12,7 +12,7 @@ function BlogList({ list }: BlogList) {
         My Articles
       </h3>
       <ul className="relative mt-5">
-        {list.map(({ id, date, title, description }) => (
+        {list.map(({ id, date, title, description }: any) => (
           <Link href={`/posts/${id}`} key={id}>
             <a>
               <li>

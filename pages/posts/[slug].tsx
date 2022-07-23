@@ -79,7 +79,7 @@ export async function getStaticPaths() {
 }
 
 // Generate the static props for the page
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }: any) {
   const fileName = fs.readFileSync(`posts/${slug}.md`, "utf-8");
   const { data: frontmatter, content } = matter(fileName);
   return {
