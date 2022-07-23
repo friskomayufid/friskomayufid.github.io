@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import {
@@ -10,8 +9,14 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
+import { getSortedPostsData } from "../utils/posts";
+import BlogList from "../components/BlogList";
 
-const Home: NextPage = () => {
+interface Home {
+  allPostsData: Array<String>;
+}
+
+const Home = ({ allPostsData }: Home) => {
   return (
     <div className="bg-graywhite h-screen">
       <Head>
@@ -82,9 +87,6 @@ const Home: NextPage = () => {
           </button>
           <button className="flex-1 text-primary text-center bg-white font-medium border-white py-3 px-4 flex rounded-md justify-center">
             Contact me
-            <div className="ml-2 mt-1">
-              <FaDownload />
-            </div>
           </button>
         </div>
         <section className="mt-8">
@@ -117,9 +119,7 @@ const Home: NextPage = () => {
                 </h3>
               </Tab.Panel>
               <Tab.Panel className="mt-4">
-                <h3 className="font-medium text-mainred text-xl text-center">
-                  Coming Soon
-                </h3>
+                <BlogList list={allPostsData} />
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
@@ -128,5 +128,14 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
 
 export default Home;
