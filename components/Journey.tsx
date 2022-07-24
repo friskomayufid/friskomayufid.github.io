@@ -14,7 +14,7 @@ function Journey() {
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span className="text-primary text-md flex">
-                  <span className="mr-2 mt-1 text-lg">
+                  <span className="mr-2 mt-0.5 text-lg">
                     <TbSchool />
                   </span>
                   Education

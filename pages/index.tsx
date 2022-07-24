@@ -84,7 +84,7 @@ const Home = ({ allPostsData }: Home) => {
           <button className="flex-1 text-white text-center bg-mainred border-mainred py-3 px-4 flex rounded-md justify-center">
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/15Aqlhwm_5eDcArkRztPIZj-104MJs-yd/view?usp=sharing"
+              href="/assets/resume.pdf"
               className="flex"
               rel="noopener noreferrer"
             >
