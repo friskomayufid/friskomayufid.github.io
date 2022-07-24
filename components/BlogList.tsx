@@ -8,7 +8,7 @@ interface BlogList {
 function BlogList({ list }: BlogList) {
   return (
     <section>
-      <h3 className="font-medium text-primary text-xl text-center">
+      <h3 className="font-medium text-primary underline text-xl text-center">
         My Articles
       </h3>
       <ul className="relative mt-5">
