@@ -25,7 +25,7 @@ export default function Post({ frontmatter, content }: Post) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container mx-auto px-4 md:w-96">
+      <div className="container mx-auto px-4 md:w-[600px]">
         <Link href="/">
           <a className="text-3xl font-medium text-mainred mt-8 flex justify-end">
             <FaBackspace />
