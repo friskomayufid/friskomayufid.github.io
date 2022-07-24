@@ -82,10 +82,17 @@ const Home = ({ allPostsData }: Home) => {
         </div>
         <div className="flex space-x-2 mt-10">
           <button className="flex-1 text-white text-center bg-mainred border-mainred py-3 px-4 flex rounded-md justify-center">
-            Download CV
-            <div className="ml-2 mt-1">
-              <FaDownload />
-            </div>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/15Aqlhwm_5eDcArkRztPIZj-104MJs-yd/view?usp=sharing"
+              className="flex"
+              rel="noopener noreferrer"
+            >
+              Download CV
+              <div className="ml-2 mt-1">
+                <FaDownload />
+              </div>
+            </a>
           </button>
           <button className="flex-1 text-primary text-center bg-white font-medium border-white py-3 px-4 flex rounded-md justify-center">
             <Link href="https://wa.me/6285329107849?text=Hi%20Frisko!%20">
