@@ -3,9 +3,9 @@ import { FaRegCopyright } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="text-secondary flex justify-center pb-5">
+    <div className="text-secondary flex justify-center pb-5 text-center">
       <FaRegCopyright className="mt-1.5 mr-1 text-sm" />{" "}
-      {`${moment().format("YYYY")} Frisko Mayufid. All Rights Reserved.`}
+      {`${moment().format("YYYY")} Frisko Mayufid`}
     </div>
   );
 }
