@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import "swiper/css";
 import Image from "next/image";
 
@@ -40,8 +41,11 @@ function Skills() {
       <Swiper
         spaceBetween={20}
         slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
         className="mt-5"
       >
         {imageList.map((item, i) => (

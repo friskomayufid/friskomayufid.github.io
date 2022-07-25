@@ -16,7 +16,7 @@ function BlogList({ list }: BlogList) {
           <Link href={`/posts/${id}`} key={id}>
             <a>
               <li>
-                <p className="text-2xl font-semibold text-primary tracking-tight">
+                <p className="text-2xl font-semibold text-primary tracking-tight underline">
                   {title}
                 </p>
                 <p className="text-sm text-secondary tracking-tight mt-2">

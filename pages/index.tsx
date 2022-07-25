@@ -14,6 +14,7 @@ import BlogList from "../components/BlogList";
 import Journey from "../components/Journey";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 
 interface Home {
   allPostsData: Array<String>;
@@ -110,6 +111,9 @@ const Home = ({ allPostsData }: Home) => {
         </section>
         <section className="mt-8">
           <BlogList list={allPostsData} />
+        </section>
+        <section className="mt-8">
+          <Footer />
         </section>
       </div>
     </div>
