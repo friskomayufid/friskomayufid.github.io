@@ -32,6 +32,9 @@ function Skills() {
     {
       src: "/assets/tailwind.svg",
     },
+    {
+      src: "/assets/valorant.svg",
+    },
   ];
   return (
     <>
