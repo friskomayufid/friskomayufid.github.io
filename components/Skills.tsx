@@ -38,7 +38,7 @@ function Skills() {
   ];
   return (
     <>
-      <h3 className="font-medium text-primary underline text-xl text-center">
+      <h3 className="font-medium text-primary dark:text-white underline text-xl text-center">
         Skills
       </h3>
       <Swiper
@@ -55,6 +55,7 @@ function Skills() {
           <SwiperSlide key={i}>
             <div className="block">
               <Image
+                priority
                 src={item.src}
                 layout="responsive"
                 width={100}

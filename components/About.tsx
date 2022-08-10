@@ -1,10 +1,10 @@
 function About() {
   return (
     <div>
-      <h3 className="font-medium text-primary underline text-xl text-center">
+      <h3 className="font-medium text-primary dark:text-white underline text-xl text-center">
         About Me
       </h3>
-      <p className="text-primary indent-8 text-justify mt-5">
+      <p className="text-primary dark:text-white indent-8 text-justify mt-5">
         {`Hello, I'm a Programmer and College Student. I specialize in Front end
         web development. Now I'm focus on studying to make fully working
         beautiful applications and websites with codes by learning from the

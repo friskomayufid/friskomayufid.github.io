@@ -45,8 +45,8 @@ export default function Post({ frontmatter, content }: Post) {
             height={50}
           />
           <div className="ml-4">
-            <h1 className="text-lg font-medium text-primary">Frisko Mayufid</h1>
-            <h3 className="text-md font-medium text-secondary">
+            <h1 className="text-lg font-medium text-primary dark:text-white">Frisko Mayufid</h1>
+            <h3 className="text-md font-medium text-secondary dark:text-white">
               Javascript Developer
             </h3>
           </div>
