@@ -1,10 +1,19 @@
+import { useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import BlogList from '../components/BlogList'
+import Jumbotron from '../components/Jumbotron'
+import Navbar from '../components/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+import { getSortedPostsData } from '../utils/posts'
+import Footer from '../components/Footer'
 
-export default function Home() {
+interface Home {
+  allPostsData: Array<String>
+}
+
+const Home = ({ allPostsData }: Home) => {
+  const [theme, _] = useState('light')
+
   return (
     <>
       <Head>
@@ -13,45 +22,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto px-4">
-        <div className="navbar bg-base-100">
-          <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">Frisko Mayufid</a>
-          </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li tabIndex={0}>
-                <a>
-                  Parent
-                  <svg
-                    className="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                  </svg>
-                </a>
-                <ul className="p-2 bg-base-100">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
-            </ul>
-          </div>
+      <div className={`${theme === 'light' ? 'light' : 'dark'}`}>
+        <div className="bg-white dark:bg-slate-800 w-full">
+          <Navbar />
+          <Jumbotron />
+          <BlogList list={allPostsData} />
+          <Footer />
         </div>
       </div>
     </>
   )
 }
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData,
+    },
+  }
+}
+
+export default Home
