@@ -14,7 +14,7 @@ function BlogList({ list }: BlogList) {
       </h3>
       <ul className="grid grid-cols-3 gap-x-12 gap-y-6">
         {list.map(({ id, date, title, description, image }: any) => (
-          <Link href={`/posts/${id}`} key={id}>
+          <Link href={`/${id}`} key={id}>
             {/* <li>
               <p className="text-2xl font-semibold text-primary dark:text-white tracking-tight underline">
                 {title}

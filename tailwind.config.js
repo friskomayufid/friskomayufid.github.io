@@ -2,17 +2,16 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        'primary': '#121212',
-        'secondary': '#696969',
+        primary: '#121212',
+        secondary: '#696969',
       },
     },
   },
-  plugins: [require('daisyui')],
-};
-
+  plugins: [require('daisyui'), require('@tailwindcss/typography')],
+}
