@@ -4,7 +4,9 @@ import { ChakraProvider } from "@chakra-ui/react";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
     </ChakraProvider>
   );
 }
