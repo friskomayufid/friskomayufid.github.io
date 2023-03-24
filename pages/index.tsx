@@ -28,9 +28,40 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Frisko Mayufid | Frontend Developer</title>
-        <meta name="description" content="I turned the design into reality" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Frisko Mayufid - Frontend Developer</title>
+        <meta name="title" content="Frisko Mayufid - Frontend Developer" />
+        <meta
+          name="description"
+          content="I'm Frontend Developer, and I do design and build internet software.
+      "
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.friskomayufid.com/" />
+        <meta
+          property="og:title"
+          content="Frisko Mayufid - Frontend Developer"
+        />
+        <meta
+          property="og:description"
+          content="I'm Frontend Developer, and I do design and build internet software.
+      "
+        />
+        <meta property="og:image" content="" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.friskomayufid.com/" />
+        <meta
+          property="twitter:title"
+          content="Frisko Mayufid - Frontend Developer"
+        />
+        <meta
+          property="twitter:description"
+          content="I'm Frontend Developer, and I do design and build internet software.
+      "
+        />
+        <meta property="twitter:image" content="" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
@@ -71,19 +102,20 @@ export default function Home() {
               </HStack>
             </Container>
           </Box>
-          <Container maxW={"6xl"} py={{ base: "4", lg: "5" }} pt={{ lg: "48" }}>
-            <Box width={"70%"}>
+          <Container maxW={"6xl"} py={{ base: "4", lg: "5" }} pt={{ base: "20", lg: "48" }}>
+            <Box width={{base: "100%", md: "70%"}}>
               <Text
-                fontSize={"6xl"}
+                fontSize={{ base: '3xl', md: '2xl', lg: '6xl' }}
+                align={{base: 'left', md: 'left'}}
                 as="h1"
                 fontWeight={"bold"}
                 lineHeight="1.5"
               >
                 Combine design & code into applications
               </Text>
-              <Text fontSize={"2xl"} as="h3" mt="4">
-                Hi, You can call me Frisko, I&apos;m Frontend Developer, and I do
-                design and build internet software.
+              <Text fontSize={{ base: 'xl', md: '2xl', lg: '2xl' }} as="h3" mt="4">
+                Hi, You can call me Frisko, I&apos;m Frontend Developer, and I
+                do design and build internet software.
               </Text>
               <Button
                 as={motion.div}
