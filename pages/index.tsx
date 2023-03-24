@@ -82,7 +82,7 @@ export default function Home() {
                 Combine design & code into applications
               </Text>
               <Text fontSize={"2xl"} as="h3" mt="4">
-                Hi, You can call me Frisko, I'm Frontend Developer, and I do
+                Hi, You can call me Frisko, I&apos;m Frontend Developer, and I do
                 design and build internet software.
               </Text>
               <Button
