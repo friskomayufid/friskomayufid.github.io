@@ -14,9 +14,17 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebookSquare,
+  FaRegCopyright,
+} from "react-icons/fa";
 import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 import { motion, useScroll, useSpring, useCycle } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const animationKeyframes = keyframes`
   0% { transform: scale(1) rotate(0); border-radius: 20%; }
@@ -118,7 +126,7 @@ export default function Home() {
           }}
           bgGradient="linear(to-r, #00c9ff, #92fe9d)"
         />
-        <Box className="section" pb={{ base: "12", md: "24" }} height="100vh">
+        <Box className="section" pb={{ base: "12", md: "24" }} height={{base: 'auto', md: '100vh'}}>
           <Box as="nav" bg="bg-surface" boxShadow="sm">
             <Container maxW={"6xl"} py={{ base: "4", lg: "5" }}>
               <HStack spacing="10" justify="space-between">
@@ -232,20 +240,19 @@ export default function Home() {
             </Box>
           </Container>
         </Box> */}
-        <Box className="section" pb={{ base: "12", md: "24" }} height="100vh">
+        <Box className="section" pb={{ base: "12", md: "24" }}>
           <Container maxW={"6xl"} py={{ base: "4", lg: "5" }}>
             <Flex
               flexDirection={{ base: "column", md: "row" }}
               flexDir={{ base: "column-reverse", md: "row" }}
             >
               <Box flexBasis={{ base: "100%", md: "60%" }}>
-                
                 <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold">
                   Nice to e-meet you!
                 </Text>
                 <Text fontSize={"xl"} lineHeight={"1.7"} marginTop="10">
                   Hello, My name is Frisko Mayufid. I started learning to
-                  program when I’m in my final year of high school, At that time
+                  program when I’m in my final year of high school, at that time
                   I was interested in the field of game programming so I learn
                   Unity 3D.
                   <br />
@@ -273,6 +280,47 @@ export default function Home() {
                 </Flex>
               </Box>
             </Flex>
+          </Container>
+        </Box>
+        <Box>
+          <Container maxW={"6xl"} py={{ base: "4", lg: "5" }}>
+            <hr></hr>
+            <Text align={"center"} mt="3">
+              Reach me out
+            </Text>
+            <Center>
+              <Flex gap={4} mt="3">
+                <Link href="https://github.com/friskomayufid">
+                  <a>
+                    <FaGithub size={24} />
+                  </a>
+                </Link>
+                <Link href="https://www.linkedin.com/in/friskomayufid/">
+                  <a>
+                    <FaLinkedin size={24} />
+                  </a>
+                </Link>
+                <Link href="https://www.instagram.com/myxxfd/">
+                  <a>
+                    <FaInstagram size={24} />
+                  </a>
+                </Link>
+                <Link href="https://www.facebook.com/Friskomayufid/">
+                  <a>
+                    <FaFacebookSquare size={24} />
+                  </a>
+                </Link>
+              </Flex>
+            </Center>
+            <Center>
+              <Flex mt={3}>
+                <FaRegCopyright
+                  size={16}
+                  style={{ marginTop: "3", marginRight: "5" }}
+                />
+                <Text>{new Date().getFullYear()} Frisko Mayufid</Text>
+              </Flex>
+            </Center>
           </Container>
         </Box>
       </main>
