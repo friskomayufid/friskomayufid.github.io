@@ -3,28 +3,18 @@ import { useRef } from "react";
 import {
   Box,
   Button,
-  ButtonGroup,
   Container,
   Flex,
-  HStack,
-  IconButton,
-  useBreakpointValue,
   keyframes,
   Text,
   Center,
 } from "@chakra-ui/react";
-import { FiMenu } from "react-icons/fi";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaFacebookSquare,
-  FaRegCopyright,
-} from "react-icons/fa";
-import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 import { motion, useScroll, useSpring, useCycle } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import BlogList from "../components/BlogList";
+import { getSortedPostsData } from "../utils/posts";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const animationKeyframes = keyframes`
   0% { transform: scale(1) rotate(0); border-radius: 20%; }
@@ -60,8 +50,7 @@ const sidebar = {
   },
 };
 
-export default function Home() {
-  const isDesktop = useBreakpointValue({ base: false, lg: true });
+const Home = ({ allPostsData }: any) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   // const { height } = useDimensions(containerRef);
@@ -109,7 +98,7 @@ export default function Home() {
         />
         <meta property="twitter:image" content="" />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <main>
         <Box
@@ -126,58 +115,12 @@ export default function Home() {
           }}
           bgGradient="linear(to-r, #00c9ff, #92fe9d)"
         />
-        <Box className="section" pb={{ base: "12", md: "24" }} height={{base: 'auto', md: '100vh'}}>
-          <Box as="nav" bg="bg-surface" boxShadow="sm">
-            <Container maxW={"6xl"} py={{ base: "4", lg: "5" }}>
-              <HStack spacing="10" justify="space-between">
-                {/* <Logo /> */}
-                <Text as="b">Frisko Mayufid</Text>
-                {isDesktop ? (
-                  <>
-                    <Flex justify="space-between" flex="1">
-                      <ButtonGroup variant="link" spacing="8">
-                        {["About", "Portofolio", "Blog"].map((item) => (
-                          <Button key={item}>{item}</Button>
-                        ))}
-                      </ButtonGroup>
-                      <HStack spacing="3">
-                        <Button
-                          as={motion.div}
-                          colorScheme={"teal"}
-                          variant="outline"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          cursor={"pointer"}
-                        >
-                          Hire me
-                        </Button>
-                        <ColorModeSwitcher />
-                      </HStack>
-                    </Flex>
-                  </>
-                ) : (
-                  <>
-                    <IconButton
-                      variant="ghost"
-                      icon={<FiMenu fontSize="1.25rem" />}
-                      aria-label="Open Menu"
-                    />
-                    {/* <motion.div
-                      initial={false}
-                      animate={isOpen ? "open" : "closed"}
-                      custom={height}
-                      ref={containerRef}
-                      className="nav-mobile"
-                    >
-                      <motion.div className="background" variants={sidebar} />
-                      <Navigation />
-                      <MenuToggle toggle={() => toggleOpen()} />
-                    </motion.div> */}
-                  </>
-                )}
-              </HStack>
-            </Container>
-          </Box>
+        <Box
+          className="section"
+          pb={{ base: "12", md: "24" }}
+          height={{ base: "auto", md: "100vh" }}
+        >
+          <Navbar />
           <Container
             maxW={"6xl"}
             py={{ base: "4", lg: "5" }}
@@ -276,54 +219,27 @@ export default function Home() {
                     src="/assets/profile.svg"
                     width="300px"
                     height="300px"
+                    alt="Frisko"
                   />
                 </Flex>
               </Box>
             </Flex>
           </Container>
         </Box>
-        <Box>
-          <Container maxW={"6xl"} py={{ base: "4", lg: "5" }}>
-            <hr></hr>
-            <Text align={"center"} mt="3">
-              Reach me out
-            </Text>
-            <Center>
-              <Flex gap={4} mt="3">
-                <Link href="https://github.com/friskomayufid">
-                  <a>
-                    <FaGithub size={24} />
-                  </a>
-                </Link>
-                <Link href="https://www.linkedin.com/in/friskomayufid/">
-                  <a>
-                    <FaLinkedin size={24} />
-                  </a>
-                </Link>
-                <Link href="https://www.instagram.com/myxxfd/">
-                  <a>
-                    <FaInstagram size={24} />
-                  </a>
-                </Link>
-                <Link href="https://www.facebook.com/Friskomayufid/">
-                  <a>
-                    <FaFacebookSquare size={24} />
-                  </a>
-                </Link>
-              </Flex>
-            </Center>
-            <Center>
-              <Flex mt={3}>
-                <FaRegCopyright
-                  size={16}
-                  style={{ marginTop: "3", marginRight: "5" }}
-                />
-                <Text>{new Date().getFullYear()} Frisko Mayufid</Text>
-              </Flex>
-            </Center>
-          </Container>
-        </Box>
+        <BlogList list={allPostsData} />
+        <Footer />
       </main>
     </>
   );
+};
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
+
+export default Home;
