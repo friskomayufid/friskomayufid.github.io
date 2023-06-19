@@ -1,25 +1,21 @@
-import fs from "fs";
-import matter from "gray-matter";
-import Head from "next/head";
-import Image from "next/image";
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
-import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import ChakraUIRenderer from "chakra-ui-markdown-renderer";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
+import fs from 'fs'
+import matter from 'gray-matter'
+import Head from 'next/head'
+import Image from 'next/image'
+import { Box, Container, Text } from '@chakra-ui/react'
+import markdownToHtml from '../../utils/remark'
 
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 interface Post {
-  frontmatter: any;
-  content: any;
+  frontmatter: any
+  contentBlog: any
 }
 
-export default function Post({ frontmatter, content }: Post) {
-  const { title, date, description, thumbnail, slug } = frontmatter;
-  const titlePage = title + " | Frisko Mayufid";
+export default function Post({ frontmatter, contentBlog }: Post) {
+  const { title, date, description, thumbnail, slug } = frontmatter
+  const titlePage = title + ' | Frisko Mayufid'
   return (
     <>
       <Head>
@@ -29,7 +25,7 @@ export default function Post({ frontmatter, content }: Post) {
       </Head>
       <Box>
         <Navbar />
-        <Container maxW={"3xl"} py={{ base: "4", lg: "5" }}>
+        <Container maxW={'3xl'} py={{ base: '4', lg: '5' }}>
           <Image
             src={thumbnail}
             alt={title}
@@ -37,73 +33,55 @@ export default function Post({ frontmatter, content }: Post) {
             height="400"
             objectFit="cover"
           />
-          <Text fontSize={"4xl"} fontWeight="bold">
+          <Text fontSize={'6xl'} fontWeight="bold">
             {title}
           </Text>
-          <Text fontSize={"l"} fontWeight={"light"}>
+          <Text fontSize={'l'} fontWeight={'light'}>
             Written on {date} by Frisko Mayufid.
           </Text>
-          <Text fontSize={"l"} mb="5" fontWeight={"light"}>
+          <Text fontSize={'l'} mb="5" fontWeight={'light'}>
             2 Minutes Read.
           </Text>
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={ChakraUIRenderer({
-              code({ node, inline, className, children, ...props }) {
-                const match = /language-(\w+)/.exec(className || "");
-                return !inline && match ? (
-                  // @ts-ignore
-                  <SyntaxHighlighter
-                    language={match[1]}
-                    PreTag="div"
-                    {...props}
-                  >
-                    {String(children).replace(/\n$/, "")}
-                  </SyntaxHighlighter>
-                ) : (
-                  <code className={className} {...props}>
-                    {children}
-                  </code>
-                );
-              },
-            })}
-          >
-            {content}
-          </ReactMarkdown>
+          <article
+            className="prose lg:prose-xl text-white dark:prose-invert"
+            dangerouslySetInnerHTML={{ __html: contentBlog }}
+          />
           {/* <Comment post={slug} /> */}
         </Container>
         <Footer />
       </Box>
     </>
-  );
+  )
 }
 
 // Generating the paths for each post
 export async function getStaticPaths() {
   // Get list of all files from our posts directory
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync('posts')
   // Generate a path for each one
   const paths = files.map((fileName) => ({
     params: {
-      slug: fileName.replace(".md", ""),
+      slug: fileName.replace('.md', ''),
     },
-  }));
+  }))
   // return list of paths
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
 // Generate the static props for the page
 export async function getStaticProps({ params: { slug } }: any) {
-  const fileName = fs.readFileSync(`posts/${slug}.md`, "utf-8");
-  const { data: frontmatter, content } = matter(fileName);
+  const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8')
+  const { data: frontmatter, content } = matter(fileName)
+
+  const contentBlog = await markdownToHtml(content || '')
+
   return {
     props: {
       frontmatter,
-      content,
+      contentBlog,
     },
-  };
+  }
 }

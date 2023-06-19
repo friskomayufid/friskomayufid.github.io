@@ -1,6 +1,13 @@
 import { DiscussionEmbed } from "disqus-react";
 
-function Comment({ post }: any) {
+type PostProps = {
+  post: {
+    slug: string;
+    title: string;
+  }
+}
+
+function Comment({ post }: PostProps) {
   const disqusShortname = "friskomayufid";
   const disqusConfig = {
     url: `https://friskomayufid.vercel.app/${post.slug}`,

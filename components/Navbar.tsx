@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Box,
   Container,
@@ -9,20 +9,20 @@ import {
   Flex,
   IconButton,
   useBreakpointValue,
-} from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { motion } from "framer-motion";
-import { FiMenu } from "react-icons/fi";
-import Link from "next/link";
+} from '@chakra-ui/react'
+import { ColorModeSwitcher } from './ColorModeSwitcher'
+import { motion } from 'framer-motion'
+import { FiMenu } from 'react-icons/fi'
+import Link from 'next/link'
 
-type Props = {};
+type Props = {}
 
 function Navbar({}: Props) {
-  const isDesktop = useBreakpointValue({ base: false, lg: true });
+  const isDesktop = useBreakpointValue({ base: false, lg: true })
 
   return (
     <Box as="nav" bg="bg-surface" boxShadow="sm">
-      <Container maxW={"6xl"} py={{ base: "4", lg: "5" }}>
+      <Container maxW={'6xl'} py={{ base: '4', lg: '5' }}>
         <HStack spacing="10" justify="space-between">
           {/* <Logo /> */}
           <Link href="/">
@@ -34,22 +34,28 @@ function Navbar({}: Props) {
             <>
               <Flex justify="space-between" flex="1">
                 <ButtonGroup variant="link" spacing="8">
-                  {["About", "Portofolio", "Blog"].map((item) => (
+                  {['About', 'Portofolio', 'Blog'].map((item) => (
                     <Button key={item}>{item}</Button>
                   ))}
                 </ButtonGroup>
                 <HStack spacing="3">
-                  <Button
-                    as={motion.div}
-                    colorScheme={"teal"}
-                    variant="outline"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    cursor={"pointer"}
+                  <Link
+                    href="https://www.linkedin.com/in/friskomayufid/"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    Hire me
-                  </Button>
-                  <ColorModeSwitcher />
+                    <Button
+                      as={motion.div}
+                      colorScheme={'teal'}
+                      variant="outline"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      cursor={'pointer'}
+                    >
+                      Hire me
+                    </Button>
+                  </Link>
+                  {/* <ColorModeSwitcher /> */}
                 </HStack>
               </Flex>
             </>
@@ -76,7 +82,7 @@ function Navbar({}: Props) {
         </HStack>
       </Container>
     </Box>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
